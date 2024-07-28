@@ -8,8 +8,8 @@ describe('App tests', () => {
 	const mockState = {}
 	test('should contains the heading 1', () => {
 		const { container } = renderWithProvider(<App {...props} />, {mockState});
-		// const heading = screen.getByText(/Hello world! I am using React/i);
-		// expect(heading).toBeInTheDocument();
+		const heading = screen.getByText(/Hello world! I am using React/i);
+		expect(heading).toBeInTheDocument();
 		screen.debug();
 	});
 });
