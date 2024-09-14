@@ -63,3 +63,29 @@ describe('App tests', () => {
 Babel is a JavaScript compiler that's a key tool for developers building React applications. Babel converts modern JavaScript code into older, more widely supported versions. This allows developers to use the latest JavaScript features while still ensuring compatibility with older browsers.
 1. Converts JSX
 Babel is used by React to convert JSX syntax into JavaScript.
+
+## What is babel? 
+Babel is a transpiler! Cool, and what is a transpiler? Transpiler is a program that converts 1 type of source code to another type of source code. In our case, it takes all the fancy javascript (react, newer ECMAScript features, typescript etc) and converts it to old school browser understandable javascript.
+
+## Defining rules for babel
+
+Babel is a transpiler so we need to tell it what to transpile, we do this using presets. These are predefined configuration that is used to transpile different type to javascript to browsers understandable one.
+Let’s install these presets first.
+
+```java
+{
+"presets": ["@babel/preset-env", "@babel/preset-react"]
+}
+```
+1. @babel/preset-env: Transforms modern JavaScript features into backwards-compatible code.
+2. @babel/preset-react: Transforms JSX syntax into plain-vanilla JavaScript function calls.
+
+## What is index.jsx and index.html?
+
+1. index.html -> acts as the entry point for your web application. It contains the foundational HTML structure that is initially displayed in the browser. Typically residing inside public/index.html. 
+This file holds the basic HTML layout, including a element tagged with an id attribute, commonly labeled as ‘root’, where the React application integrates.
+2. index.js -> The index.js file acts as the initial point of entry for your React application coded in JavaScript. Within src/index.js, you typically encounter the code responsible for rendering the root component of your application onto the DOM.
+
+## What is Webpack in React?
+Webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser.
+Webpack bundles all the JavaScript files into single or output files.
