@@ -13,6 +13,7 @@
 ## Jest Configuration
 Create a file jest.config.js and add the configurations. like coverage directory, test environments etc
 
+```java
 module.exports = {
   collectCoverage: true,
   collectCoverageFrom: ['src/**/*.{js,jsx}'],
@@ -20,14 +21,17 @@ module.exports = {
   testEnvironment: '<rootDir>/src/tests/custom-test-env.js',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 };
+```
 
 ## Adding scripts
 
+```java
 scripts:{
 ... //scripts you already have
 test: "jest",
 coverage: "jest --coverage"
 }
+```
 
 ## Custom renderer method
 We have created a custom render method inside test-utils.js. This method will render the component with mock redux state and mock props. We are using mockStore to initialize the custom store that will keep mocked redux state.
@@ -37,6 +41,7 @@ We create a folder called tests and add test.jsx and other test files inside thi
 Run below command to execute test
 npm test
 
+```java
 import { render, screen } from '@testing-library/react';
 import React from 'react';
 import App from '../App.jsx';
@@ -52,3 +57,4 @@ describe('App tests', () => {
 		screen.debug();
 	});
 });
+```
