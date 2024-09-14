@@ -58,3 +58,8 @@ describe('App tests', () => {
 	});
 });
 ```
+
+## Babel in React 
+Babel is a JavaScript compiler that's a key tool for developers building React applications. Babel converts modern JavaScript code into older, more widely supported versions. This allows developers to use the latest JavaScript features while still ensuring compatibility with older browsers.
+1. Converts JSX
+Babel is used by React to convert JSX syntax into JavaScript.
